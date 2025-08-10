@@ -1,0 +1,76 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+void writeToFile(string filename) {
+    ofstream file(filename); // overwrite mode
+    if (!file) {
+        cout << "Error opening file for writing!" << endl;
+        return;
+    }
+    string data;
+    cout << "Enter data to write: ";
+    cin.ignore(); 
+    getline(cin, data);
+    file << data << endl;
+    cout << "Data written successfully.\n";
+    file.close();
+}
+
+void appendToFile(string filename) {
+    ofstream file(filename, ios::app); // append mode
+    if (!file) {
+        cout << "Error opening file for appending!" << endl;
+        return;
+    }
+    string data;
+    cout << "Enter data to append: ";
+    cin.ignore(); 
+    getline(cin, data);
+    file << data << endl;
+    cout << "Data appended successfully.\n";
+    file.close();
+}
+
+void readFromFile(string filename) {
+    ifstream file(filename);
+    if (!file) {
+        cout << "Error opening file for reading!" << endl;
+        return;
+    }
+    string line;
+    cout << "\nFile contents:\n";
+    while (getline(file, line)) {
+        cout << line << endl;
+    }
+    file.close();
+}
+
+int main() {
+    string filename;
+    int choice;
+
+    cout << "Enter file name (with .txt): ";
+    cin >> filename;
+
+    do {
+        cout << "\n--- File Management Tool ---\n";
+        cout << "1. Write to file\n";
+        cout << "2. Append to file\n";
+        cout << "3. Read from file\n";
+        cout << "4. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1: writeToFile(filename); break;
+            case 2: appendToFile(filename); break;
+            case 3: readFromFile(filename); break;
+            case 4: cout << "Exiting program.\n"; break;
+            default: cout << "Invalid choice!\n";
+        }
+    } while (choice != 4);
+
+    return 0;
+}
