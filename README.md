@@ -1,5 +1,5 @@
 # File-Management-Tool
-*Company*   :  CODTECH IT SOLUTIONS
+*COMPANY*   :  CODTECH IT SOLUTIONS
 
 *NAME*      :  PARTIBHA SARKAR
 
