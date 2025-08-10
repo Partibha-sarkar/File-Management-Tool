@@ -32,3 +32,7 @@ Libraries: <iostream> (input/output), <fstream> (file handling), <string> (strin
 IDE: VS Code / Code::Blocks / Dev-C++
 
 Approach: Menu-driven program with loops and switch-case structure
+
+#OUTPUT#
+
+<img width="327" height="206" alt="Image" src="https://github.com/user-attachments/assets/f09f194c-5b7d-457e-9c26-0f83cc742fb4" />
