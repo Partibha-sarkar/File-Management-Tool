@@ -7,7 +7,7 @@
 
 *DOMAIN*    :  C++ PROGRAMMING
 
-*DURATION*  :  4 
+*DURATION*  :  4 WEEKS
 
 *MENTOR*    :  NEELA SANTOSH
 
